@@ -8,7 +8,7 @@ Si sabés algo de frontend, con esto alcanza.
 
 ## Primera vez (clonar y levantar)
 
-1. Tenés Node **18+** (ideal **20 LTS**) y npm.
+1. Tenés **Node 20 LTS** (mínimo **20.9**; Next 16 no corre en Node 18) y npm.
 2. En la carpeta del repo:
 
 ```bash
