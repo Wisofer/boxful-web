@@ -29,3 +29,6 @@ Resumen rapido
 Backend encendido, frontend funcionara muy bien, Descarga el repo, ejecuta npm install, configura el .env y listo ejecuta npm run dev listo
 
 
+cada cuenta solo ve sus órdenes e historial; no hay modo admin ni datos compartidos entre usuarios en esta entrega.
+
+
