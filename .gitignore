@@ -21,3 +21,7 @@ pnpm-debug.log*
 .env.production.local
 
 *.tsbuildinfo
+
+# Artefactos de Playwright u otras herramientas E2E (si se usan de nuevo).
+test-results/
+playwright-report/

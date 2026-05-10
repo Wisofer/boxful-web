@@ -32,7 +32,7 @@ export function getApiErrorMessage(error: unknown): string {
       return "Demasiados intentos. Esperá un momento e intentá de nuevo.";
     }
     if (error.code === "ECONNABORTED" || error.message === "Network Error") {
-      return "Sin conexión o el servidor no respondió. Revisá tu red e intentá de nuevo.";
+      return "Sin conexión o el servidor no respondió. Revisa si el servidor esta encendido.";
     }
     return "No se pudo completar la solicitud. Intentá de nuevo.";
   }
