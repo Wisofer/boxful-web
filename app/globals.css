@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
+@source "./**/*.{js,ts,jsx,tsx}";
+@source "../src/**/*.{js,ts,jsx,tsx}";
+
+@theme {
+  --max-width-dashboard: 75rem;
+  --max-width-form: 25rem;
+  --max-width-form-register: 37.5rem;
+  --spacing-touch-target: 2.75rem;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --boxful-auth-layout-root: #fafafa;
+  --boxful-auth-layout-aside: #f2f2f2;
+  --boxful-auth-aside-bg: #f0f0f0;
+  --boxful-bg-canvas: #f5f5f5;
+
+  --boxful-shell-chrome: #f7f8fa;
+  --boxful-text-strong: #1a1a2e;
+  --boxful-touch-min: var(--spacing-touch-target);
+
+  --bp-sm: 40rem;
+  --bp-md: 48rem;
+  --bp-lg: 64rem;
+  --bp-xl: 80rem;
+  --bp-2xl: 96rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  font-size: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    font-size: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family:
+    var(--font-app),
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  background-color: var(--boxful-bg-canvas);
+  color: var(--boxful-text-strong);
+  overflow-x: clip;
+  text-rendering: optimizeLegibility;
+}
+
+@media (max-width: 47.9875rem) {
+  :where(.ant-btn.ant-btn-lg) {
+    min-height: var(--boxful-touch-min);
+  }
+
+  :where(.ant-input-affix-wrapper-lg),
+  :where(.ant-picker-large .ant-picker) {
+    min-height: var(--boxful-touch-min);
+  }
 }

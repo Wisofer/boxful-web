@@ -1,0 +1,130 @@
+.loginWrap {
+  padding-top: clamp(2.5rem, 7vh, 4rem);
+  padding-bottom: clamp(1.5rem, 5vh, 3rem);
+}
+
+.loginTitle {
+  margin: 0 !important;
+  padding: 0;
+  font-size: clamp(1.75rem, 1.5rem + 1vw, 1.875rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.28 !important;
+  letter-spacing: -0.02em;
+  color: #1a1c29 !important;
+}
+
+.loginLead {
+  display: block;
+  margin-top: 0.625rem;
+  margin-bottom: 2.25rem;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: #666666;
+}
+
+.loginLabel {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #1a1c29;
+}
+
+.loginControlGap {
+  margin-top: 0.5rem;
+}
+
+.fieldBlock {
+  margin-bottom: 1.5rem;
+}
+
+.loginShell :global(.ant-input-affix-wrapper) {
+  border-radius: 0.5rem !important;
+  border-color: #e0e0e0 !important;
+  background-color: #ffffff !important;
+  padding-inline: 0.875rem;
+  min-height: var(--boxful-touch-min, 2.75rem);
+}
+
+.loginShell :global(.ant-input-affix-wrapper:hover),
+.loginShell :global(.ant-input-affix-wrapper-focused) {
+  border-color: #c8c8c8 !important;
+}
+
+.loginShell :global(.ant-input-affix-wrapper .ant-input) {
+  font-size: 0.9375rem !important;
+  line-height: 1.45 !important;
+  background: transparent !important;
+}
+
+.loginShell :global(.ant-input-affix-wrapper .ant-input::placeholder) {
+  color: #b3b3b3;
+}
+
+.loginShell :global(.ant-input-outlined.ant-input) {
+  border-radius: 0.5rem !important;
+  border-color: #e0e0e0 !important;
+  background-color: #ffffff !important;
+  padding: 0.625rem 0.875rem;
+  font-size: 0.9375rem !important;
+  line-height: 1.45 !important;
+  min-height: var(--boxful-touch-min, 2.75rem);
+}
+
+.loginShell :global(.ant-input-outlined.ant-input:hover),
+.loginShell :global(.ant-input-outlined.ant-input:focus) {
+  border-color: #c8c8c8 !important;
+}
+
+.loginShell :global(.ant-input-outlined.ant-input::placeholder) {
+  color: #b3b3b3;
+}
+
+.submitWrap {
+  margin-top: 3rem;
+}
+
+.submitButton {
+  min-height: var(--boxful-touch-min, 2.75rem) !important;
+  height: auto !important;
+  width: 100%;
+  padding-block: 0.75rem !important;
+  padding-inline: 1rem !important;
+  font-weight: 700 !important;
+  font-size: 0.9375rem !important;
+  color: #ffffff !important;
+  background: #3350d1 !important;
+  border-color: #3350d1 !important;
+  border-radius: 0.5rem !important;
+  box-shadow: none !important;
+}
+
+.submitButton:focus-visible {
+  outline: 2px solid #3350d1;
+  outline-offset: 2px;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: #2e48bc !important;
+  border-color: #2e48bc !important;
+  color: #ffffff !important;
+}
+
+.footer {
+  display: block;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: #666666;
+}
+
+.footerLink {
+  font-weight: 700;
+  color: #1a1c29 !important;
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  text-decoration: underline;
+}

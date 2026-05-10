@@ -1,0 +1,41 @@
+.compactWrap {
+  margin-block-end: 1.5rem;
+}
+
+.introTitle {
+  margin: 0 0 8px !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  color: var(--boxful-text-strong) !important;
+}
+
+.introText {
+  margin: 0 !important;
+  max-width: 880px;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: #595959 !important;
+}
+
+.heroHeadline {
+  margin: 0 0 0.5rem !important;
+  font-size: clamp(1.375rem, 1.25rem + 0.65vw, 1.625rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  color: #1a1c32 !important;
+  letter-spacing: -0.02em;
+}
+
+.heroLead {
+  margin: 0 0 clamp(1.25rem, 4vw, 1.75rem) !important;
+  max-width: 52rem;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  color: #6b7280 !important;
+}
+
+.heroEm {
+  font-weight: 700 !important;
+  color: #1a1c32 !important;
+}

@@ -1,0 +1,154 @@
+.shellInset {
+  box-sizing: border-box;
+  padding-inline: var(--sidebar-gutter-inline, 16px);
+}
+
+.shellNav {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  padding-inline: var(--sidebar-gutter-inline, 16px);
+
+  overflow-x: hidden;
+
+  background: transparent;
+}
+
+.menuLabel {
+  display: block !important;
+  margin: 0 0 10px !important;
+
+  padding: 4px 0 0 !important;
+  padding-inline: 0 !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #1a1a2e !important;
+}
+
+.shellMenu {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.shellMenu :global(.ant-menu),
+.shellMenu :global(.ant-menu.ant-menu-root.ant-menu-inline) {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-block: 4px !important;
+  padding-inline: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+
+  border-inline-end: none !important;
+  background: transparent !important;
+}
+
+.shellMenu :global(li.ant-menu-item) {
+  display: flex !important;
+  box-sizing: border-box !important;
+  align-items: center !important;
+
+  margin-block: 18px !important;
+  margin-inline: 0 !important;
+
+  flex-shrink: 0 !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-block: 14px !important;
+  padding-inline: 16px !important;
+  height: auto !important;
+  min-height: 52px !important;
+  line-height: 1.35 !important;
+  overflow: visible !important;
+  border-radius: 10px !important;
+}
+
+.shellMenu :global(li.ant-menu-item:first-of-type) {
+  margin-top: 2px;
+}
+
+.shellMenu :global(li.ant-menu-item .ant-menu-item-icon + .ant-menu-title-content) {
+  margin-inline-start: 10px !important;
+}
+
+.shellMenu :global(li.ant-menu-item .ant-menu-item-icon) {
+  font-size: 18px !important;
+}
+
+.shellMenu :global(li.ant-menu-item:not(.ant-menu-item-selected)),
+.shellMenu :global(li.ant-menu-item:not(.ant-menu-item-selected) .ant-menu-item-icon),
+.shellMenu
+  :global(li.ant-menu-item:not(.ant-menu-item-selected) .ant-menu-title-content),
+.shellMenu :global(li.ant-menu-item:not(.ant-menu-item-selected) a) {
+  color: #6b7280 !important;
+}
+
+.shellMenu :global(li.ant-menu-item:not(.ant-menu-item-selected):hover) {
+  background-color: rgb(0 0 0 / 5%) !important;
+}
+
+.shellMenu
+  :global(li.ant-menu-item:not(.ant-menu-item-selected):hover .ant-menu-item-icon),
+.shellMenu :global(li.ant-menu-item:not(.ant-menu-item-selected):hover a),
+.shellMenu :global(li.ant-menu-item:not(.ant-menu-item-selected):hover span) {
+  color: #434343 !important;
+}
+
+.shellMenu :global(li.ant-menu-item-selected),
+.shellMenu :global(li.ant-menu-item-selected:hover),
+.shellMenu :global(li.ant-menu-item-selected.ant-menu-item:hover) {
+  border: none !important;
+  padding-block: 1.25rem !important;
+  padding-inline: 1rem 1.125rem !important;
+  min-height: 3.75rem !important;
+  border-radius: 10px !important;
+  box-shadow: inset 4px 0 0 rgb(42 71 143) !important;
+  background-color: var(--ant-color-primary, #3b5998) !important;
+  color: #fff !important;
+}
+
+.shellMenu :global(li.ant-menu-item-selected .ant-menu-item-icon),
+.shellMenu :global(li.ant-menu-item-selected .ant-menu-title-content),
+.shellMenu :global(li.ant-menu-item-selected a),
+.shellMenu :global(li.ant-menu-item-selected span),
+.shellMenu :global(li.ant-menu-item-selected svg) {
+  color: #fff !important;
+}
+
+.shellMenu :global(li.ant-menu-item::after) {
+  display: none !important;
+  border: none !important;
+  opacity: 0 !important;
+}
+
+.shellMenu.shellMenuCollapsed :global(li.ant-menu-item) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-block: 6px !important;
+  padding: 11px !important;
+  border-radius: 10px !important;
+}
+
+.shellMenu.shellMenuCollapsed :global(li.ant-menu-item-selected),
+.shellMenu.shellMenuCollapsed :global(li.ant-menu-item-selected:hover),
+.shellMenu.shellMenuCollapsed :global(li.ant-menu-item-selected.ant-menu-item:hover) {
+  box-shadow: none !important;
+  min-height: unset !important;
+}
+
+.shellFooter {
+  box-sizing: border-box;
+  padding-inline: var(--sidebar-gutter-inline, 16px);
+  padding-block: 12px 16px;
+}

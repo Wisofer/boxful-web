@@ -1,0 +1,65 @@
+.title {
+  margin: 0 !important;
+  font-size: 26px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  color: #1a1c29 !important;
+}
+
+.subtitle {
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666666;
+}
+
+.labelBold {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1c29;
+}
+
+.fieldSpacing {
+  margin-bottom: 24px;
+}
+
+.submitWrap {
+  margin-top: 48px;
+}
+
+.submitButton {
+  height: 46px !important;
+  padding-inline: 16px !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  color: #ffffff !important;
+  background: #3350d1 !important;
+  border-color: #3350d1 !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+
+.submitButton:focus-visible {
+  outline: 2px solid #3350d1;
+  outline-offset: 2px;
+}
+
+.submitButton:hover {
+  background: #2e48bc !important;
+  border-color: #2e48bc !important;
+  color: #ffffff !important;
+}
+
+.inputField {
+  border-radius: 8px !important;
+}
+
+.selectField {
+  border-radius: 8px !important;
+}
+
+.selectField :global(.ant-select-selector) {
+  border-radius: 8px !important;
+}

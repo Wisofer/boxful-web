@@ -1,0 +1,32 @@
+import type { OrderStatus } from "@/types/boxful-api";
+export type HistorialEnvioRow = {
+  key: string;
+  orderNo: string;
+  createdAtISO: string;
+  createdAtFormatted: string;
+  statusCode: OrderStatus;
+  statusLabel: string;
+  firstName: string;
+  lastName: string;
+  department: string;
+  municipality: string;
+  packages: number;
+  isCOD: boolean;
+  expectedAmount: number;
+  collectedAmount: number;
+  shippingCost: number;
+  commission: number;
+  liquidationNetSigned: number;
+  customerPhone: string;
+  customerAddress: string;
+  notesRaw: string;
+  notesDetailDisplay: string;
+  packageLines: {
+    description: string;
+    quantity: number;
+    weight: number;
+    length: number;
+    width: number;
+    height: number;
+  }[];
+};

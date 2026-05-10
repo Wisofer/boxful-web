@@ -1,0 +1,341 @@
+.historialSurface:global(.ant-card) {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.historialSurface :global(.ant-card-body) {
+  overflow: visible !important;
+}
+
+.historialSurface .mobileCard,
+.historialSurface .mobileSkeletonCard {
+  border: none !important;
+}
+
+.historialSurface .mobileCardTop {
+  border-bottom: none !important;
+}
+
+.monthRangePicker {
+  width: 100%;
+  min-width: 0;
+}
+
+.monthRangePicker :global(.ant-picker) {
+  min-height: 2.5rem !important;
+  border-radius: 0.5rem !important;
+}
+
+@media (max-width: 47.9875rem) {
+  .monthRangePicker :global(.ant-picker.ant-picker-large) {
+    min-height: var(--boxful-touch-min, 2.75rem) !important;
+  }
+}
+
+@media (min-width: 48rem) {
+  .monthRangePicker {
+    max-width: 22.5rem;
+  }
+}
+
+.toolbar {
+  display: grid;
+  gap: 1em;
+  width: 100%;
+  min-width: 0;
+}
+
+.toolbarActions {
+  min-width: 0;
+}
+
+.toolbarActions :global(.ant-space) {
+  width: 100%;
+}
+
+@media (min-width: 48rem) {
+  .toolbar {
+    grid-template-columns: minmax(0, 22.5rem) minmax(0, 1fr);
+    align-items: center;
+    column-gap: 1rem;
+  }
+
+  .toolbarActions :global(.ant-space) {
+    width: auto;
+    margin-inline-start: auto;
+    justify-content: flex-end;
+  }
+}
+
+.mobilePane {
+  margin-top: 1.5rem;
+  width: 100%;
+  min-width: 0;
+}
+
+@media (min-width: 48rem) {
+  .mobilePane {
+    display: none;
+  }
+}
+
+.desktopPane {
+  display: none;
+  margin-top: 1.5rem;
+  width: 100%;
+  min-width: 0;
+}
+
+@media (min-width: 48rem) {
+  .desktopPane {
+    display: block;
+  }
+}
+
+.tableWrap {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.tableScrollKill {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tableScrollKill :global(*::-webkit-scrollbar) {
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}
+
+.mobileList {
+  display: grid;
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobileCard {
+  box-sizing: border-box;
+  border: 1px solid #f0f0f0;
+  border-radius: 0.5rem;
+  padding: 1em;
+  background: #fff;
+}
+
+.mobileCardTop {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  min-width: 0;
+  margin-bottom: 0.75em;
+  padding-bottom: 0.75em;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobileOrderNo {
+  flex: 1;
+  min-width: 0;
+  font-weight: 700 !important;
+  font-size: 0.875rem !important;
+  color: #1a1a2e !important;
+}
+
+.mobileCardDl {
+  display: grid;
+  gap: 0.625em;
+  margin: 0;
+}
+
+.mobileCardRow {
+  display: grid;
+  grid-template-columns: minmax(0, 6.5rem) minmax(0, 1fr);
+  gap: 0.5em 0.75em;
+  align-items: start;
+}
+
+.mobileCardRow dt {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #8c8c8c;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.mobileCardRow dd {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #737373;
+  word-break: break-word;
+}
+
+.mobileCardRow dd.monoAmount {
+  font-variant-numeric: tabular-nums;
+}
+
+.mobileEmpty {
+  margin-block: 2rem;
+}
+
+.mobileSkeleton {
+  display: grid;
+  gap: 1em;
+}
+
+.mobileSkeletonCard {
+  padding: 1em;
+  border: 1px solid #f0f0f0;
+  border-radius: 0.5rem;
+  background: #fafafa;
+}
+
+.table :global(.ant-spin-nested-loading),
+.table :global(.ant-spin-container),
+.table :global(.ant-table) {
+  width: 100%;
+  max-width: 100%;
+}
+
+.table :global(.ant-table-wrapper),
+.table :global(.ant-table-container),
+.table :global(.ant-table-content) {
+  overflow: visible !important;
+  overflow-y: visible !important;
+  max-height: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.table :global(.ant-table-body) {
+  overflow-y: visible !important;
+  overflow-x: hidden !important;
+  max-height: none !important;
+}
+
+.table :global(.ant-table-sticky-scroll) {
+  display: none !important;
+}
+
+.table :global(.ant-table-cell-scrollbar) {
+  width: 0 !important;
+  min-width: 0 !important;
+  max-width: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  overflow: hidden !important;
+  background: transparent !important;
+}
+
+.table :global(.ant-table-thead > tr > th.ant-table-cell-scrollbar)::before,
+.table :global(.ant-table-thead > tr > th.ant-table-cell-scrollbar)::after {
+  display: none !important;
+  content: none !important;
+}
+
+.table:global(:has(.ant-table-cell-scrollbar))
+  :global(table > colgroup > col:last-child) {
+  width: 0 !important;
+  min-width: 0 !important;
+}
+
+.table :global(.ant-table) {
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.table :global(.ant-table-thead > tr > th) {
+  padding-block: 14px !important;
+  padding-inline: 16px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #595959 !important;
+  background: #fafafa !important;
+  border-bottom: none !important;
+}
+
+.table :global(.ant-table-thead > tr > th)::before {
+  display: none !important;
+}
+
+.table :global(.ant-table-tbody > tr > td) {
+  overflow: hidden;
+  padding-block: 16px !important;
+  padding-inline: 16px !important;
+  border-bottom: none !important;
+}
+
+.table :global(tbody > tr[data-row-click]) :global(td) {
+  cursor: pointer;
+}
+
+.table :global(tbody > tr[data-row-click]:hover > td),
+.table :global(tbody > tr[data-row-click]:hover .ant-table-cell) {
+  background: #fafafa !important;
+}
+
+.table :global(.ant-table-tbody > tr.ant-table-placeholder > td) {
+  border-bottom: none !important;
+}
+
+.orderCell {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  color: #1a1a2e !important;
+}
+
+.dataCell {
+  font-size: 14px !important;
+  color: #737373 !important;
+}
+
+.packageBadge {
+  display: inline-flex;
+  box-sizing: border-box;
+  min-width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.125em;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #237804;
+  background: #f6ffed;
+  border-radius: 9999px;
+}
+
+.desktopPane .tableWrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.monoAmount {
+  font-variant-numeric: tabular-nums;
+  font-size: 13px !important;
+  white-space: nowrap;
+}
+
+.liquidationPos {
+  color: #237804 !important;
+  font-weight: 600 !important;
+}
+
+.liquidationNeg {
+  color: #cf1322 !important;
+  font-weight: 600 !important;
+}
+
+.mobileDetailBtn {
+  margin-top: 0.75rem;
+  width: 100%;
+}
+
+.statusTagCell :global(.ant-tag) {
+  margin-inline-end: 0;
+}

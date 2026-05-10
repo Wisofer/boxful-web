@@ -1,0 +1,200 @@
+.sectionTitle {
+  display: block;
+  margin: 0 0 24px !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #1a1a2e !important;
+}
+
+.dialSelect {
+  width: 96px !important;
+  flex-shrink: 0;
+}
+
+.dialSelect :global(.ant-select-selector) {
+  border-radius: 8px 0 0 8px !important;
+}
+
+.phoneInput :global(.ant-input),
+.phoneInput :global(.ant-input-affix-wrapper) {
+  border-radius: 0 8px 8px 0 !important;
+}
+
+.pceBox {
+  box-sizing: border-box;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.125rem;
+
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: #fff5f5;
+  border: 1px solid rgba(0, 0, 0, 0.045);
+}
+
+.pceRowTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 1.75rem;
+}
+
+.pceTitle {
+  margin: 0 !important;
+
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  color: #1e1b4b !important;
+}
+
+.pceRowBottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  column-gap: 1.125rem;
+  row-gap: 0.875rem;
+}
+
+.pceHint {
+  margin: 0 !important;
+  flex: 1 1 auto;
+  min-width: min(260px, 100%);
+  max-width: 32rem;
+
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  font-weight: 400 !important;
+  color: #6b7280 !important;
+}
+
+.pceHintStrong {
+  font-weight: 600 !important;
+  color: #374151 !important;
+}
+
+.pceAmountWrap {
+  flex: 0 0 auto;
+  width: min(160px, 100%);
+}
+
+.amountInput :global(.ant-input-affix-wrapper),
+.amountInput :global(.ant-input-outlined.ant-input) {
+  min-height: 38px !important;
+  padding-block: 0 !important;
+
+  background-color: #ffffff !important;
+  border-radius: 8px !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 1px 2px rgb(15 23 43 / 4%) !important;
+}
+
+.amountInput :global(.ant-input-affix-wrapper:hover),
+.amountInput :global(.ant-input-outlined.ant-input:hover) {
+  border-color: #d9d9d9 !important;
+}
+
+.amountInput :global(.ant-input-affix-wrapper-focused),
+.amountInput :global(.ant-input-outlined.ant-input:focus) {
+  border-color: #b3c4e8 !important;
+}
+
+.amountInput :global(.ant-input-affix-wrapper-status-error) {
+  border-color: var(--ant-color-error, #ff4d4f) !important;
+}
+
+.amountInput :global(.ant-input) {
+  text-align: right !important;
+
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  background: transparent !important;
+}
+
+.amountInput :global(.ant-input-prefix) {
+  margin-inline-end: 10px !important;
+  padding-inline-start: 4px !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  color: #1e1b4b !important;
+}
+
+.amountInputDisabled
+  :global(.ant-input-affix-wrapper.ant-input-affix-wrapper-disabled) {
+  background-color: rgb(252 252 252) !important;
+  border-color: #f0f0f0 !important;
+}
+
+.amountInputDisabled :global(.ant-input-affix-wrapper-disabled .ant-input) {
+  font-weight: 600 !important;
+  color: #8c8c8c !important;
+}
+
+@media (max-width: 575px) {
+  .pceBox {
+    padding: 1rem 1.125rem;
+  }
+
+  .pceRowBottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .pceAmountWrap {
+    width: 100%;
+    max-width: none;
+    align-self: stretch;
+  }
+}
+
+.footerActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+  padding-top: 4px;
+}
+
+.nextButton {
+  min-width: 156px !important;
+  height: 48px !important;
+  padding-inline: 28px !important;
+  border: none !important;
+  border-radius: 12px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 6%),
+    0 8px 24px rgb(59 89 152 / 32%) !important;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    opacity 160ms ease !important;
+}
+
+.nextButton:not(:disabled):hover {
+  box-shadow:
+    0 2px 4px rgb(0 0 0 / 8%),
+    0 12px 32px rgb(59 89 152 / 38%) !important;
+  transform: translateY(-1px);
+}
+
+.nextButton:not(:disabled):active {
+  transform: translateY(0);
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 10%),
+    0 4px 16px rgb(59 89 152 / 28%) !important;
+}
+
+.nextButton:disabled {
+  box-shadow: none !important;
+  transform: none !important;
+}

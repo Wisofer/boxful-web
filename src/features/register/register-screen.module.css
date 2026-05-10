@@ -1,0 +1,100 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.backLink {
+  display: inline-flex;
+  margin-top: 4px;
+  padding: 6px;
+  color: #1a1c29;
+  line-height: 1;
+  border-radius: 8px;
+}
+
+.backLink:hover {
+  color: #3350d1;
+  background: rgba(51, 80, 209, 0.06);
+}
+
+.titleCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.dialSelect {
+  width: 96px !important;
+  flex-shrink: 0;
+}
+
+.dialSelect :global(.ant-select-selector) {
+  border-radius: 8px 0 0 8px !important;
+}
+
+.whatsappInput :global(.ant-input-affix-wrapper),
+.whatsappInput :global(.ant-input) {
+  border-radius: 0 8px 8px 0 !important;
+}
+
+.modalIcon {
+  margin-bottom: 16px;
+  font-size: 48px;
+  color: #faad14;
+}
+
+.modalTitle {
+  margin: 0 0 16px !important;
+  text-align: center;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #1a1c29 !important;
+}
+
+.modalBody {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666666;
+}
+
+.modalFooter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.modalBtnDefault {
+  min-width: 104px;
+  height: 40px !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+}
+
+.modalBtnPrimary {
+  min-width: 104px;
+  height: 40px !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  background: #3350d1 !important;
+  border-color: #3350d1 !important;
+  color: #fff !important;
+}
+
+.modalBtnPrimary:hover {
+  background: #2e48bc !important;
+  border-color: #2e48bc !important;
+  color: #fff !important;
+}
+
+.dateFullWidth {
+  width: 100%;
+}
+
+.dateFullWidth :global(.ant-picker) {
+  border-radius: 8px !important;
+}
