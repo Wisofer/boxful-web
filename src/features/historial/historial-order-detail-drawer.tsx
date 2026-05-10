@@ -242,19 +242,27 @@ export function HistorialOrderDetailDrawer({
                 <Descriptions.Item label="Comisión COD">
                   {formatUsd(row.commission)}
                 </Descriptions.Item>
-                <Descriptions.Item label="A liquidar (vista UI)">
-                  <Typography.Text
-                    strong
-                    className={
-                      row.liquidationNetSigned > 0
-                        ? styles.liqPos
-                        : row.liquidationNetSigned < 0
-                          ? styles.liqNeg
-                          : undefined
-                    }
-                  >
-                    {formatUsd(row.liquidationNetSigned)}
-                  </Typography.Text>
+                <Descriptions.Item label="Neto liquidación al comercio">
+                  <>
+                    <Typography.Text
+                      strong
+                      className={
+                        row.liquidationNetSigned > 0
+                          ? styles.liqPos
+                          : row.liquidationNetSigned < 0
+                            ? styles.liqNeg
+                            : undefined
+                      }
+                    >
+                      {formatUsd(row.liquidationNetSigned)}
+                    </Typography.Text>
+                    <Typography.Paragraph type="secondary" className={styles.liqExplain}>
+                      {row.isCOD
+                        ? "Tras recolectado, menos costo de envío y comisión COD."
+                        : "Envío estándar: la API puede enviar el costo solo como magnitud positiva; aquí se muestra con signo negativo como deducción al comercio."}{" "}
+                      Positivo: a tu favor · negativo: cargo o deducción.
+                    </Typography.Paragraph>
+                  </>
                 </Descriptions.Item>
               </Descriptions>
 

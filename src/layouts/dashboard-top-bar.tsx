@@ -3,6 +3,7 @@ import { WalletOutlined } from "@ant-design/icons";
 import { Popover, Skeleton, Space, Typography } from "antd";
 import type { ReactNode } from "react";
 import { useDashboardHeaderFromShell } from "@/components/providers/dashboard-header-context";
+import { formatUsd } from "@/utils/order-financial-display";
 import styles from "./dashboard-top-bar.module.css";
 type DashboardTopBarProps = {
   title: ReactNode;
@@ -14,12 +15,6 @@ export function CrearUnEnvioHeaderTitle(): ReactNode {
       Crear un <strong className={styles.titleEmphasisWord}>envío</strong>
     </span>
   );
-}
-function formatLiquidationDisplay(value: number): string {
-  return new Intl.NumberFormat("es-SV", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(value);
 }
 function DefaultTrail() {
   const { displayName, liquidationMonthTotal, liquidationSummaryMonthLabel, loading } =
@@ -38,6 +33,10 @@ function DefaultTrail() {
         content={
           <span className={styles.liquidationMonthPopover}>
             Mes: {liquidationSummaryMonthLabel}
+            <span className={styles.liquidationMonthHint}>
+              Total con la misma convención que el historial (envío estándar: cargo mostrado con
+              signo negativo aunque en API llegue positivo solo como magnitud).
+            </span>
           </span>
         }
         trigger={["hover", "click"]}
@@ -47,14 +46,14 @@ function DefaultTrail() {
           className={styles.tagPill}
           tabIndex={0}
           role="button"
-          aria-label={`Monto a liquidar: ${formatLiquidationDisplay(liquidationMonthTotal)}. Tocá o pasá el cursor para ver el mes.`}
+          aria-label={`Liquidación mes: ${formatUsd(liquidationMonthTotal)}. Tocá o pasá el cursor para ver el mes y la ayuda.`}
         >
           <Space size={6}>
             <WalletOutlined aria-hidden />
             <span>
-              Monto a liquidar{" "}
+              Liquidación mes{" "}
               <strong className={styles.liquidationAmount}>
-                $ {formatLiquidationDisplay(liquidationMonthTotal)}
+                {formatUsd(liquidationMonthTotal)}
               </strong>
             </span>
           </Space>

@@ -72,6 +72,13 @@
   color: #cf1322 !important;
 }
 
+.liqExplain {
+  margin-block: 6px 0 0 !important;
+  margin-bottom: 0 !important;
+  font-size: 12px !important;
+  line-height: 1.45 !important;
+}
+
 .meta {
   font-variant-numeric: tabular-nums;
 }
