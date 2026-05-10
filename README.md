@@ -1,94 +1,31 @@
-# boxful-web
+Antes de descargar este repo, Recuerda a ver descargado primero el backend, para que el frontend se conecte al backend y que funcione muy bien
 
-Cliente web para **Boxful**: login, alta de cuenta, crear/editar ordenes, historial con detalle lateral, etc. Lo armamos con **Next.js (App Router)**, React, **Ant Design**, Tailwind donde encaja bien, y Axios contra tu API Nest (o similar).
+Paso 1 — Descargá el proyecto
 
-Si sabés algo de frontend, con esto alcanza.
+Descarga el proyecto o bajalo en **ZIP**, descomprimilo y en la terminal metete en esa carpeta.
 
----
 
-## Primera vez (clonar y levantar)
+Paso 2 — Dependencias
 
-1. Tenés **Node 20 LTS** (mínimo **20.9**; Next 16 no corre en Node 18) y npm.
-2. En la carpeta del repo:
+Usá una **Node LTS estable** reciente (**20 o 22**, `node -v` para chequear) y luego ejecuta el comando
+npm install, recuerda esta en la rais del repo cd /boxful-web
 
-```bash
-npm install
-```
 
-3. Duplicá el ejemplo de entorno y ajustá la URL del backend:
+Paso 3 — Variables de entorno (este repo, solo frontend)
 
-```bash
-cp .env.example .env.local
-```
+En la **raíz** del proyecto creá **`.env`** o **`.env.local`** (Next lee ambos; para local suele usarse `.env.local`).
 
-Abrís `.env.local` y configurás **`NEXT_PUBLIC_API_BASE_URL`** (ej. `http://localhost:3001/api` sin slash final si tu cliente ya arma rutas así).
+Pegá esto (solo hace falta la URL del API; el backend en local suele ir en **3001** y el frontend en **3000**):
 
-4. Arrancá en desarrollo:
+NEXT_PUBLIC_API_BASE_URL=http://localhost:3001/api
 
-```bash
-npm run dev
-```
+recuerda puedes cambiar el puerto si gustas desde el backend y aqui en el frontend puedes concetarlo 
+Luego de hacer esta minima configuracion, ejecuta
 
-Abrís **http://localhost:3000** y listo.
+npm run dev y Abrís **http://localhost:3000**.
 
----
+Resumen rapido
 
-## Scripts útiles
+Backend encendido, frontend funcionara muy bien, Descarga el repo, ejecuta npm install, configura el .env y listo ejecuta npm run dev listo
 
-| Comando                | Para qué                           |
-| ---------------------- | ---------------------------------- |
-| `npm run dev`          | servidor de desarrollo (Turbopack) |
-| `npm run build`        | compilación producción             |
-| `npm run start`        | servidor después de `build`        |
-| `npm run lint`         | ESLint                             |
-| `npm run format`       | Prettier en todo                   |
-| `npm run format:check` | solo revisa formato (CI friendly)  |
 
----
-
-## Cómo está armado el repo (resumen)
-
-- **`app/`** — Rutas y layouts del App Router (`page.tsx`, `layout.tsx`, `loading.tsx`, `globals.css`). Casi todo el “enchufe” a páginas; la lógica gorda está en `src/`.
-
-- **`src/components/`** — Piezas reusables UI (tarjetas, botones, formularios mínimos, providers de tema/Ant).
-
-- **`src/layouts/`** — Shell del dashboard (sidebar + header chrome + zona de contenido), layout de auth, top bar del dashboard.
-
-- **`src/features/`** — Pantallas grandes por dominio: `auth/`, `crear-orden/` (flujo paso a paso + edición por query), `dashboard/` (router del hub `/app`), `historial/` (tabla/detalle/drawer), `login/` y `register/`.
-
-- **`src/services/`** — Llamadas HTTP (Axios client en `services/http/` + `orders`, `users`, `auth`).
-
-- **`src/lib/`** — Helpers que no son “servicio”: env validado (`env.ts`), tema Ant, JWT/token en cliente, drafts en `sessionStorage` para crear orden.
-
-- **`src/hooks/`** — Hooks reusables (`use-dashboard-header`, `use-historial-orders`, navegación con pending, breakpoints Ant).
-
-- **`src/utils/` y `src/validations/`** — Helpers puros + esquemas Zod/formularios.
-
-- **`src/types/`** y **`src/constants/`** — Tipos TS compartidos, rutas públicas (`routes.ts`), textos unificados (`loading-copy`, `form-feedback-copy`, ubicaciones SV, sidebar del menú).
-
-- **`public/`** — Estáticos (logo, etc.). No sube el lock por ignorar `public` solo si lo pusieramos; acá está trackeado.
-
-El alias **`@/*`** apunta a **`src/*`** (ver `tsconfig.json`).
-
----
-
-## Producción rápida
-
-```bash
-npm install
-npm run build
-npm run start
-```
-
-Sirve la app en el puerto que te indica la consola (por defecto 3000). El API sigue configurándose solo con **`NEXT_PUBLIC_*`** en tiempo de build.
-
----
-
-## Tips si algo rompe al clonar
-
-- Sin **`.env.local`** el front igual arranca pero usa fallback de API definido en `src/lib/env.ts` — si tu backend está en otro puerto/host, configurá **`NEXT_PUBLIC_API_BASE_URL`**.
-- Si cambiás dependencias, volvé a **`npm install`**.
-
----
-
-Licencia privada del proyecto (ajustá si hace falta).
